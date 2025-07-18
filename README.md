@@ -42,6 +42,6 @@ ghdl -e alu_tb
 ghdl -r alu_tb --vcd=wave.vcd
 ```
 
-⚠️Se non riuscite a vedere il file wave.vcd, allora potete usare EDA playground : 
+⚠️Se non riuscite a vedere il file wave.vcd tramite gtkwave, allora potete usare EDA playground : 
 ![Waveform Screenshot](https://github.com/user-attachments/assets/e1ec7cef-f2cc-4e95-9253-f3a123d1868c)
 
