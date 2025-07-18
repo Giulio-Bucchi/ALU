@@ -43,5 +43,5 @@ ghdl -r alu_tb --vcd=wave.vcd
 ```
 ⚠️ If you encounter issues opening wave.vcd in GTKWave, you can simulate and visualize the waveform using EDA Playground instead.
 
-![Waveform Screenshot](https://github.com/user-attachments/assets/e1ec7cef-f2cc-4e95-9253-f3a123d1868c)
+![Waveform Screenshot](https://github.com/user-attachments/assets/6e720640-1189-45fb-80d2-0f4006490c6b)
 
