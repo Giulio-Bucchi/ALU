@@ -1,39 +1,39 @@
-# ALU a 32 bit in VHDL
+# 32-bit ALU in VHDL
 
-## Descrizione
+## Description
 
-Questo progetto implementa una **Arithmetic Logic Unit (ALU)** a 32 bit utilizzando il linguaggio VHDL.  
-L’ALU è un componente fondamentale nei processori, responsabile dell’esecuzione delle principali operazioni aritmetiche e logiche.
+This project implements a **32-bit Arithmetic Logic Unit (ALU)** using the VHDL hardware description language.  
+The ALU is a fundamental component in processors, responsible for executing core arithmetic and logical operations.
 
-Il progetto include anche un **testbench** dedicato alla verifica funzionale, che consente di simulare e validare il comportamento del componente in differenti scenari operativi.
+The repository also includes a **testbench** for functional verification through simulation, allowing validation of the ALU's behavior under various operating scenarios.
 
-## File presenti
+## Files
 
-- `alu.vhdl`: contiene la descrizione architetturale e comportamentale dell'ALU.
-- `alu_tb.vhdl`: testbench completo per la simulazione e la verifica del corretto funzionamento dell’ALU.
+- `alu.vhdl`: Contains the architectural and behavioral description of the ALU.
+- `alu_tb.vhdl`: Complete testbench for simulating and verifying the ALU's correct functionality.
 
-## Funzionalità
+## Features
 
-L’ALU supporta diverse operazioni su due operandi a 32 bit, selezionate tramite un segnale di controllo (opcode).
+The ALU supports various operations on two 32-bit operands, selected via a control signal (`opcode`).
 
-| Opcode | Operazione             | Descrizione                        |
-|--------|------------------------|------------------------------------|
-| "000"  | Addizione              | Somma tra A e B (`A + B`)         |
-| "001"  | Sottrazione            | Differenza tra A e B (`A - B`)    |
-| "010"  | AND logico bit a bit   | `A AND B`                          |
-| "011"  | OR logico bit a bit    | `A OR B`                           |
-| "100"  | XOR logico bit a bit   | `A XOR B`                          |
-| "101"  | NOT                    | Complemento bit a bit di A (`~A`) |
-| "110"  | Incremento             | Incremento di A (`A + 1`)         |
-| "111"  | Decremento             | Decremento di A (`A - 1`)         |
+| Opcode | Operation              | Description                           |
+|--------|------------------------|---------------------------------------|
+| "000"  | Addition               | Adds A and B (`A + B`)                |
+| "001"  | Subtraction            | Subtracts B from A (`A - B`)          |
+| "010"  | Bitwise AND            | Logical AND between A and B (`A AND B`) |
+| "011"  | Bitwise OR             | Logical OR between A and B (`A OR B`)   |
+| "100"  | Bitwise XOR            | Logical XOR between A and B (`A XOR B`) |
+| "101"  | Bitwise NOT            | Bitwise negation of A (`~A`)          |
+| "110"  | Increment              | Increments A by 1 (`A + 1`)           |
+| "111"  | Decrement              | Decrements A by 1 (`A - 1`)           |
 
-> *Nota: Il comportamento esatto può variare in base alla specifica implementazione. Consultare `alu.vhdl` per i dettagli.*
+> *Note: The exact behavior may vary depending on the specific implementation. Refer to `alu.vhdl` for full details.*
 
-## Istruzioni per la simulazione
+## Simulation Instructions
 
-È possibile simulare il progetto utilizzando ambienti come **GHDL** e visualizzare le waveform con **GTKWave**.
+You can simulate the project using tools such as **GHDL**, and view the resulting waveforms with **GTKWave**.
 
-### Simulazione con GHDL
+### Simulating with GHDL
 
 ```bash
 ghdl -a alu.vhdl
@@ -41,7 +41,7 @@ ghdl -a alu_tb.vhdl
 ghdl -e alu_tb
 ghdl -r alu_tb --vcd=wave.vcd
 ```
+⚠️ If you encounter issues opening wave.vcd in GTKWave, you can simulate and visualize the waveform using EDA Playground instead.
 
-⚠️Se non riuscite a vedere il file wave.vcd tramite gtkwave, allora potete usare EDA playground : 
 ![Waveform Screenshot](https://github.com/user-attachments/assets/e1ec7cef-f2cc-4e95-9253-f3a123d1868c)
 
